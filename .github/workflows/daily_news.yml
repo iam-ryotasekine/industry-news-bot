@@ -1,0 +1,29 @@
+name: Daily AI News Bot
+
+on:
+  schedule:
+    # 毎日日本時間の朝9時（UTC 0:00）に実行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 手動でも実行できるようにするボタン
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests feedparser
+
+      - name: Run news script
+        env:
+          # ここで安全にWebhook URLを渡します
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python3 send_slack.py
