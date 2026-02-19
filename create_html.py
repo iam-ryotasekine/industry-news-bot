@@ -34,16 +34,32 @@ def get_source_info(source_name):
         return "🤓", "#2ea44f" # 技術記事グリーン
     else:
         return "📰", "#6b7280" # その他グレー
+def get_ai_summary_demo(title):
+    # APIキーが使えるようになるまでの「デモ用」の要約枠
+    return f"""
+    <div class='ai-summary'>
+        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
+        <ul>
+            <li>この記事「{title[:20]}...」の重要ポイントをAIが解析中。</li>
+            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
+            <li>社内展開時のイメージとして先行実装しています。</li>
+        </ul>
+    </div>
+    """
 def generate_html_dashboard():
     today = datetime.datetime.now().strftime("%Y年%m月%d日")
     feed = feedparser.parse(RSS_URL)
-    # 修正イメージ
-    for entry in feed.entries:
-     title = entry.title
-     link = entry.link
-     # タイトルの後ろにある「 - 媒体名」を切り離して取得
-     source = entry.get('source', {}).get('title', '不明')
-
+    html_text = "<!DOCTYPE html>\n<html lang='ja'>\n<head>\n"
+    html_text += "<meta charset='UTF-8'>\n"
+    html_text += "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
+    html_text += f"<title>🤖 {today} AIトレンド・ダッシュボード</title>\n"
+    html_text += "<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet'>\n"
+    html_text += "<style>\n"
+    html_text += "    body { font-family: 'Helvetica Neue', Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); ... }\n"
+    html_text += "    .ai-summary { background-color: #f8fafc; border-left: 4px solid #667eea; padding: 12px; margin: 10px 0; font-size: 14px; border-radius: 0 8px 8px 0; }\n"
+    html_text += "    .ai-summary-title { font-weight: bold; color: #4a5568; margin-bottom: 5px; display: flex; align-items: center; gap: 5px; }\n"
+    html_text += "    .ai-summary ul { margin: 0; padding-left: 20px; color: #4a5568; }\n"
+    html_text += "    .ai-summary li { margin-bottom: 3px; }\n"
     html_text = "<!DOCTYPE html>\n<html lang='ja'>\n<head>\n"
     html_text += "<meta charset='UTF-8'>\n"
     html_text += "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
@@ -73,8 +89,6 @@ def generate_html_dashboard():
     html_text += "}\n"
     html_text += "</style>\n</head>\n<body>\n"
     html_text += "<div class='header'>\n"
-    html_text += f'<span class="source-badge">{source}</span>\n'
-    html_text += f'<a href="{link}" target="_blank">{title}</a>\n'
     html_text += '<button onclick="topFunction()" id="backToTop" title="Go to top">▲</button>\n'
     html_text += """
         <script>
@@ -91,19 +105,18 @@ def generate_html_dashboard():
         }
         </script>
         """
-    for entry in feed.entries[:30]:
-        display_date = format_date(entry.get('published', '')) # 日付変換
-        source = entry.get('source', {}).get('title', '不明')   # その記事のソースを取得
-        icon, color = get_source_info(source)                  # 色とアイコンを決定
-
+    for entry in feed.entries[:15]:
+        display_date = format_date(entry.get('published', ''))
+        source = entry.get('source', {}).get('title', '不明')
+        icon, color = get_source_info(source)
+        summary_html = get_ai_summary_demo(entry.title)       
         html_text += f"<div class='card'>\n"
-        # style="..." で、その記事専用の色を直接指定します
         html_text += f"    <span class='source-badge' style='background-color: {color};'>{icon} {source}</span>\n"
         html_text += f"    <a href='{entry.link}' target='_blank'>{entry.title}</a>\n"
+        html_text += f"    {summary_html}\n"
         html_text += f"    <div class='date'>🕒 {display_date}</div>\n"
-        html_text += f"</div>\n"
-        html_text += "</div>\n"
-        html_text += "</body>\n</html>"
+        html_text += f"    </div>\n"
+    html_text += "     </body>\n</html>"
 
     with open("news_dashboard.html", "w", encoding="utf-8") as f:
         f.write(html_text)
