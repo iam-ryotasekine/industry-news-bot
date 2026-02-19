@@ -3,7 +3,7 @@ from datetime import datetime, timedelta # これを追加
 import urllib.parse
 import datetime
 
-KEYWORD = "AIエージェント OR 生成AI トレンド OR ChatGPT 活用"
+KEYWORD = "AIエージェント OR 生成AI トレンド OR OCR OR RPA"
 safe_keyword = urllib.parse.quote(KEYWORD)
 RSS_URL = "https://news.google.com/rss/search?q=" + safe_keyword + "&hl=ja&gl=JP&ceid=JP:ja"
 
