@@ -19,7 +19,7 @@ def generate_html_dashboard():
     html_text = "<!DOCTYPE html>\n<html lang='ja'>\n<head>\n"
     html_text += "<meta charset='UTF-8'>\n"
     html_text += "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
-    html_text += "<title>" + KEYWORD + " ニュース</title>\n"
+    html_text += "<title>🤖 AIトレンド・ダッシュボード | Ryota's Bot</title>\n"
     html_text += "<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet'>\n"
     html_text += "<style>\n"
     html_text += "body { font-family: 'Noto Sans JP', sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }\n"
