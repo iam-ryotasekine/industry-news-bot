@@ -20,13 +20,34 @@ body { font-family: 'Noto Sans JP', sans-serif; background-color: #f4f7f6; color
 a { color: #2d3748; text-decoration: none; font-size: 18px; font-weight: 700; display: block; margin-bottom: 8px; line-height: 1.4; }
 a:hover { color: #667eea; }
 .date { color: #a0aec0; font-size: 13px; }
-.source-badge {background-color: #e0e7ff; /* 清潔感のある薄い青 */color: #4338ca;/* 視認性の良い濃い青 */padding: 4px 10px;border-radius: 20px;       /* 角を丸めてモダンな印象に */font-size: 11px;font-weight: bold;margin-bottom: 10px;display: inline-block;     /* これでタグっぽくなります */}</style>
+.source-badge {background-color: #e0e7ff; /* 清潔感のある薄い青 */color: #4338ca;/* 視認性の良い濃い青 */padding: 4px 10px;border-radius: 20px;       /* 角を丸めてモダンな印象に */font-size: 11px;font-weight: bold;margin-bottom: 10px;display: inline-block;     /* これでタグっぽくなります */}#backToTop {
+display: none; position: fixed; bottom: 20px; right: 20px;
+background-color: #667eea; color: white; border: none;
+padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 99;
+}
+</style>
 </head>
 <body>
 <div class='header'>
 <span class="source-badge">PR TIMES</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBucWJFdER5X0tOWXlKV3dNTkt4bm5EYXRzZDYxYVZ2ZGw4SEtyYWlxR3JfaXFfb2Nub2lVOWtXOHhMRkxtaGw0U0xvMVUwX3lrcG9xcHdSRTJnMWxqaUx1Y1BfS2hiem9zOHc?oc=5" target="_blank">【特許AIエージェント最新事例】音声・ジェスチャー統合による「ロボット制御技術」における発明抽出を「MyTokkyo.Ai」が支援 - PR TIMES</a>
-<div class='card'>
+<button onclick="topFunction()" id="backToTop" title="Go to top">▲</button>
+
+        <script>
+        let mybutton = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        </script>
+        <div class='card'>
     <span class='source-badge'>PR TIMES</span>
     <a href='https://news.google.com/rss/articles/CBMiXEFVX3lxTE1CWFpWb1dNRU5Bd0dEV0ctcm1wcTBiYVdtcld2QmhPRkNKS3N5aHdwUTRMVDczZmZadm5HVHd3RkFoX2x4RjJNa1lITGtsSFluWi1JZVhvaXBxSVdx?oc=5' target='_blank'>【2026年最新】AIエージェント比較10選｜自律型AIの選び方を徹底解説 - AIsmiley</a>
     <div class='date'>🕒 Thu, 05 Feb 2026 04:30:00 GMT</div>
@@ -48,8 +69,58 @@ a:hover { color: #667eea; }
 </div>
 <div class='card'>
     <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMihAFBVV95cUxOc1dVblRJcWJva2ktMTZNODgzWi1Pd2hBd05CemNBbEtEU2ZTRlpIdkRTWGdTLWZra3JqdFl5N1U3QVJ1T3o0ai1VSUQ0U1lNTWhxRkJPZy1lZXg0Z19LcV83d2JDNVVOSTJWN2R0Smt1OTd2SHNUakJZVS1XdktBN3RCTVM?oc=5' target='_blank'>【2026年版】AIエージェントフレームワーク主要15種を比較解説 | DOORS DX - ブレインパッド</a>
+    <div class='date'>🕒 Mon, 26 Jan 2026 08:00:00 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
     <a href='https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uSW1WN3liSmlJdmxQQk00NUVJTG43cnc2dEpMc1lVcTEwTnlxU04tMEdGZFZtQndYcWc5M284S2I2eG1hQi1ydmxENmNjQVpkdTVDNFllcTNUUjA?oc=5' target='_blank'>スターティアレイズのデータ連携ツール「JENKA」、AIエージェント活用を支援する機能アップデートを実施 - 朝日新聞</a>
     <div class='date'>🕒 Wed, 18 Feb 2026 08:24:42 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiYEFVX3lxTE5UY3kyR0s3MVpRaG5wRzl6WklsRkoxR3c1dUtFbWdtUDY0RkFMRHE5WGEtSUpXYlhjaGFtbXN2WjFwb3VySzJtbXZ3elJqWjFpU3VGUFFncU9RelNSdlFMMA?oc=5' target='_blank'>AIエージェントとは？ 2025年度上半期のアップデートを解説 - dir.co.jp</a>
+    <div class='date'>🕒 Wed, 14 Jan 2026 08:00:00 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTE9NSEVJN3pBUlFyQ0tuLXJ6cDZ6MDVSY01rQUVvLU5uelhST1UwZE8zQ0VFVWh0ZDVfQXcwVURaNE55N0U5S01hRldEVXFtel9Hc0VB?oc=5' target='_blank'>AIエージェントを実装、激変する「中国仕入れ」最前線 - WWDJAPAN</a>
+    <div class='date'>🕒 Mon, 16 Feb 2026 03:43:29 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiY0FVX3lxTE1GYUtWNXdZWS01RVNHV0Z0UWJ1ZlYyaVBLMUQ2amZYZ3BEc29fWDBIQTFmM3RvdFlkbXlfS1NLdG9NaldfWkM1aGlFNF9uU3FvWjZMb3NRcjNsVXNJWXFyNmtmaw?oc=5' target='_blank'>生成AIとAIエージェントの導入＆業務活用 実践講座 - 日経BP</a>
+    <div class='date'>🕒 Wed, 17 Dec 2025 08:00:00 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiY0FVX3lxTE5DMnlBSnRDa01QMThmWG9odDFLU1pvUmJKdVVRSmdwMnF5OTdJV1lyVl9TM1NUV3BieC1mdV9PYnpxcWlqcTByQXI5OHZ4alRGSC13UloxcWo5QWVDOVFqTG5rMA?oc=5' target='_blank'>対立議論により専門家レベルの結論を導出するマルチAIエージェント技術を開発 - 三菱電機 オフィシャルサイト</a>
+    <div class='date'>🕒 Tue, 20 Jan 2026 08:00:00 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE1kZzhaS2RiWi00dzFsV2hJZ0JOSkliRVNYR2g1SnkxbUQyLW9OZl9nT1RLY3VNdGh6OUVybVZhcTlldzVZS1h2M080V1FRRnlwTE96cVVPZmZSTll0M0U4TlN0T1FGRGdqSlE?oc=5' target='_blank'>ストラテジット、AI専門メディア「Ledge.ai」を運営する株式会社レッジと共同で「AIエージェント実装研修」を開始 - PR TIMES</a>
+    <div class='date'>🕒 Tue, 17 Feb 2026 01:00:03 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOR0RBalpBQ1lwLXJkLUh6V09IQzRXeHMtTDN3VmVDc05TWjdSYlFfSmhaQXo3TkU1Z0Z0RlZiTTUxcDhRaF9rS3RENUNKcWkyZlNZQXFac2ZFejRhaXJuWmtZaU1mODBFNnNBUGk4N0t0ZkdoblRLQXVpcFhKMFV4X1YwOA?oc=5' target='_blank'>生成AI 業務変革カオスマップを公開！～実務を再定義する「自律・自動化・専門特化」、200製品以上の最新ソリューションを集約～ - AIsmiley</a>
+    <div class='date'>🕒 Tue, 17 Feb 2026 08:00:00 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTFBVZVN4QVRDZnJwM2prWWotUjlYZUZyeXVyNWxaMWYyZmdONkRMWDlXR2lfV0FGVEdseEVhcWM3YkM1OWpjQW9YdmJueFU4OEQwR2MxNWpGS2pmcTNsVFFPazByaDM4T3lobkE?oc=5' target='_blank'>【2/17（火）開催】製造業のマルチAIエージェント活用最前線と東南アジアAI最新動向を解説する「マルチAIエージェント戦略×東南アジアAI」セミナーをハイブリッド（京橋＋Web）開催 - PR TIMES</a>
+    <div class='date'>🕒 Sat, 14 Feb 2026 07:06:23 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMibEFVX3lxTE04ejJLUk93RXdvRGVYRTlMbXVkU3FucWQ4cEZGN0NjTXp1OS1Jbnd4Z1YzM0VWSElvcml5bktjcE1iSUVwVDl5VHg4MktZMXFLU2pRa0FtOWYxTTI3MUNMOGlRVGcza1VhaDhYQg?oc=5' target='_blank'>「AI博覧会 Spring 2026」 東京国際フォーラムにて4月7日・8日に開催 ～最新AI製品200点以上が集結、フィジカルAI・ロボットゾーンを新設～ - AIsmiley</a>
+    <div class='date'>🕒 Tue, 17 Feb 2026 03:26:40 GMT</div>
+</div>
+<div class='card'>
+    <span class='source-badge'>PR TIMES</span>
+    <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE9pVHBpbDVsUUJTcXdEakJsQ0dhZkdCRWJoY3M2MnUzU0VpUHBfNVRBejZaUndKdXQ4RDNpSlV1NHljb0VEenlxckh1Z3RHeTFWQXZrZll3Y0pFU0JMSkZSWXBPMGgwVktfUkE?oc=5' target='_blank'>「AI Agent Day 2026」全登壇者を一挙公開｜AIエージェント導入後の変化と、世界が進める“未来実装”を俯瞰する2日間 - PR TIMES</a>
+    <div class='date'>🕒 Fri, 23 Jan 2026 08:00:00 GMT</div>
 </div>
 </div>
 </body>

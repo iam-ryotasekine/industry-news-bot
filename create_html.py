@@ -53,11 +53,33 @@ def generate_html_dashboard():
     html_text += "a:hover { color: #667eea; }\n"
     html_text += ".date { color: #a0aec0; font-size: 13px; }\n"
     html_text += ".source-badge {background-color: #e0e7ff; /* 清潔感のある薄い青 */color: #4338ca;/* 視認性の良い濃い青 */padding: 4px 10px;border-radius: 20px;       /* 角を丸めてモダンな印象に */font-size: 11px;font-weight: bold;margin-bottom: 10px;display: inline-block;     /* これでタグっぽくなります */}"
+    html_text += "#backToTop {\n"
+    html_text += "display: none; position: fixed; bottom: 20px; right: 20px;\n"
+    html_text += "background-color: #667eea; color: white; border: none;\n"
+    html_text += "padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px;\n"
+    html_text += "box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 99;\n"
+    html_text += "}\n"
     html_text += "</style>\n</head>\n<body>\n"
     html_text += "<div class='header'>\n"
     html_text += f'<span class="source-badge">{source}</span>\n'
     html_text += f'<a href="{link}" target="_blank">{title}</a>\n'
-    for entry in feed.entries[:5]:
+    html_text += '<button onclick="topFunction()" id="backToTop" title="Go to top">▲</button>\n'
+    html_text += """
+        <script>
+        let mybutton = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        </script>
+        """
+    for entry in feed.entries[:15]:
         display_date = format_date(entry.get('published', '')) # 日付を変換
         html_text += f"<div class='card'>\n"
         html_text += f"    <span class='source-badge'>{source}</span>\n"
