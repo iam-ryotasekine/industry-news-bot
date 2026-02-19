@@ -3,7 +3,7 @@ from datetime import datetime, timedelta # これを追加
 import urllib.parse
 import datetime
 
-KEYWORD = "AIエージェント 最新"
+KEYWORD = "AIエージェント OR 生成AI トレンド OR ChatGPT 活用"
 safe_keyword = urllib.parse.quote(KEYWORD)
 RSS_URL = "https://news.google.com/rss/search?q=" + safe_keyword + "&hl=ja&gl=JP&ceid=JP:ja"
 
@@ -91,7 +91,7 @@ def generate_html_dashboard():
         }
         </script>
         """
-    for entry in feed.entries[:15]:
+    for entry in feed.entries[:30]:
         display_date = format_date(entry.get('published', '')) # 日付変換
         source = entry.get('source', {}).get('title', '不明')   # その記事のソースを取得
         icon, color = get_source_info(source)                  # 色とアイコンを決定
