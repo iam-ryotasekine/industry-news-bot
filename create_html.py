@@ -22,6 +22,18 @@ def format_date(date_str):
             return f"{dt.month}/{dt.day}"
     except:
         return date_str # 変換に失敗したらそのまま表示
+def get_source_info(source_name):
+    # ソース名に含まれる文字で色とアイコンを判定
+    if "Google" in source_name:
+        return "🌐", "#4285f4" # Googleブルー
+    elif "PR TIMES" in source_name:
+        return "📢", "#0b419b" # PR TIMESネイビー
+    elif "Tech" in source_name:
+        return "💻", "#ff4500" # テック系オレンジ
+    elif "Zenn" in source_name or "Qiita" in source_name:
+        return "🤓", "#2ea44f" # 技術記事グリーン
+    else:
+        return "📰", "#6b7280" # その他グレー
 def generate_html_dashboard():
     today = datetime.datetime.now().strftime("%Y年%m月%d日")
     feed = feedparser.parse(RSS_URL)
@@ -80,15 +92,18 @@ def generate_html_dashboard():
         </script>
         """
     for entry in feed.entries[:15]:
-        display_date = format_date(entry.get('published', '')) # 日付を変換
+        display_date = format_date(entry.get('published', '')) # 日付変換
+        source = entry.get('source', {}).get('title', '不明')   # その記事のソースを取得
+        icon, color = get_source_info(source)                  # 色とアイコンを決定
+
         html_text += f"<div class='card'>\n"
-        html_text += f"    <span class='source-badge'>{source}</span>\n"
+        # style="..." で、その記事専用の色を直接指定します
+        html_text += f"    <span class='source-badge' style='background-color: {color};'>{icon} {source}</span>\n"
         html_text += f"    <a href='{entry.link}' target='_blank'>{entry.title}</a>\n"
         html_text += f"    <div class='date'>🕒 {display_date}</div>\n"
         html_text += f"</div>\n"
-
-    html_text += "</div>\n"
-    html_text += "</body>\n</html>"
+        html_text += "</div>\n"
+        html_text += "</body>\n</html>"
 
     with open("news_dashboard.html", "w", encoding="utf-8") as f:
         f.write(html_text)
