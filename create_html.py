@@ -1,4 +1,5 @@
 import feedparser
+from datetime import datetime, timedelta # これを追加
 import urllib.parse
 import datetime
 
@@ -6,6 +7,21 @@ KEYWORD = "AIエージェント 最新"
 safe_keyword = urllib.parse.quote(KEYWORD)
 RSS_URL = "https://news.google.com/rss/search?q=" + safe_keyword + "&hl=ja&gl=JP&ceid=JP:ja"
 
+def format_date(date_str):
+    try:
+        # ニュースの日付を解析（Googleニュース等の形式）
+        dt = datetime.strptime(date_str, '%a, %d %b %Y %H:%M:%S %Z')
+        now = datetime.now()
+        diff = now - dt
+
+        if diff < timedelta(hours=1):
+            return f"新着！ {diff.seconds // 60}分前"
+        elif diff < timedelta(days=1):
+            return f"今日 {dt.hour:02}:{dt.minute:02}"
+        else:
+            return f"{dt.month}/{dt.day}"
+    except:
+        return date_str # 変換に失敗したらそのまま表示
 def generate_html_dashboard():
     today = datetime.datetime.now().strftime("%Y年%m月%d日")
     feed = feedparser.parse(RSS_URL)
@@ -42,10 +58,12 @@ def generate_html_dashboard():
     html_text += f'<span class="source-badge">{source}</span>\n'
     html_text += f'<a href="{link}" target="_blank">{title}</a>\n'
     for entry in feed.entries[:5]:
-        html_text += "<div class='card'>\n"
-        html_text += "<a href='" + entry.link + "' target='_blank'>" + entry.title + "</a>\n"
-        html_text += "<div class='date'>🕒 " + entry.get('published', '日時不明') + "</div>\n"
-        html_text += "</div>\n"
+        display_date = format_date(entry.get('published', '')) # 日付を変換
+        html_text += f"<div class='card'>\n"
+        html_text += f"    <span class='source-badge'>{source}</span>\n"
+        html_text += f"    <a href='{entry.link}' target='_blank'>{entry.title}</a>\n"
+        html_text += f"    <div class='date'>🕒 {display_date}</div>\n"
+        html_text += f"</div>\n"
 
     html_text += "</div>\n"
     html_text += "</body>\n</html>"
