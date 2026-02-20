@@ -103,9 +103,19 @@ def generate_html_dashboard():
         source = entry.get('source', {}).get('title', '不明')
         icon, color = get_source_info(source)
         summary_html = get_ai_summary_demo(entry.title)       
+        score = 0
+        stars = ""
+        if "AI" in entry.title or "人工知能" in entry.title:
+            score += 2
+        if "SaaS" in entry.title or "クラウド" in entry.title:
+            score += 1
+        if "営業" in entry.title or "セールス" in entry.title:
+            score += 1
+        if score > 0:
+            stars = f"<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>{'★' * score}</span>"
         html_text += f"<div class='card'>\n"
         html_text += f"    <span class='source-badge' style='background-color: {color};'>{icon} {source}</span>\n"
-        html_text += f"    <a href='{entry.link}' target='_blank'>{entry.title}</a>\n"
+        html_text += f"    <a href='{entry.link}' target='_blank'>{entry.title}{stars}</a>\n"
         html_text += f"    {summary_html}\n"
         html_text += f"    <div class='date'>🕒 {display_date}</div>\n"
         html_text += f"    </div>\n"
