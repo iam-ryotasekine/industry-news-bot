@@ -1,278 +1,301 @@
 <!DOCTYPE html>
-<html lang='ja'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>🤖 2026年02月20日 AIトレンド・ダッシュボード</title>
-<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet'>
-<style>
-    .ai-summary { background-color: #f8fafc; border-left: 4px solid #667eea; padding: 12px; margin: 10px 0; font-size: 14px; border-radius: 0 8px 8px 0; }
-    .ai-summary-title { font-weight: bold; color: #4a5568; margin-bottom: 5px; display: flex; align-items: center; gap: 5px; }
-    .ai-summary ul { margin: 0; padding-left: 20px; color: #4a5568; }
-    .ai-summary li { margin-bottom: 3px; }
-body { font-family: 'Noto Sans JP', sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }
-.container { max-width: 800px; margin: 0 auto; padding: 20px; }
-.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; border-radius: 0 0 15px 15px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-<div class="header">
-<h1>🤖 AI業界ニュース・ダッシュボード</h1>
-<p class="status-tag">● 自動更新稼働中</p>
-<p class="update-time">最終更新:2026年02月20日</p>
-</div>
-.header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 14px; }
-.card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid #667eea; }
-.card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-a { color: #2d3748; text-decoration: none; font-size: 18px; font-weight: 700; display: block; margin-bottom: 8px; line-height: 1.4; }
-a:hover { color: #667eea; }
-.date { color: #a0aec0; font-size: 13px; }
-.source-badge {background-color: #e0e7ff; /* 清潔感のある薄い青 */color: #4338ca;/* 視認性の良い濃い青 */padding: 4px 10px;border-radius: 20px;       /* 角を丸めてモダンな印象に */font-size: 11px;font-weight: bold;margin-bottom: 10px;display: inline-block;     /* これでタグっぽくなります */}#backToTop {
-display: none; position: fixed; bottom: 20px; right: 20px;
-background-color: #667eea; color: white; border: none;
-padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 99;
-}
-</style>
-</head>
-<body>
-<div class='header'>
-<button onclick="topFunction()" id="backToTop" title="Go to top">▲</button>
-
-        <script>
-        let mybutton = document.getElementById("backToTop");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        };
-        function topFunction() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-        </script>
-        <div class='card'>
-    <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
-    <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE1YOHFITzl0STBScWVMWHY4MWZENS1ONHF0WlVkRWh6eEpBLWZqMm5qZC1VODNOc0ZOVWV3X2YwR1dKczk5QU01Mzc1QkR3UXdTY0g2Z1JpTGR3LWRQUS1jbmdCZE1ZVXIzRXc?oc=5' target='_blank'>Hacobu、生成AIが帳票を物流データ化するAI-OCR「MOVO Adapter」提供開始。物流領域のFAX・紙業務を起点からデジタル化 - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+    <html lang='ja'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>🤖 2026年02月20日 AIダッシュボード</title>
+        <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet'>
+        
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; border-radius: 0 0 15px 15px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #667eea; }
+        a { color: #2d3748; text-decoration: none; font-size: 18px; font-weight: 700; display: block; margin-bottom: 8px; }
+        .date { color: #a0aec0; font-size: 13px; margin-top: 10px; }
+        .source-badge { color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        .ai-summary { background-color: #f8fafc; border-left: 4px solid #667eea; padding: 12px; margin: 10px 0; font-size: 14px; border-radius: 0 8px 8px 0; }
+        /* カテゴリタグ用の新スタイル */
+        .category-tag { padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: bold; margin-right: 5px; vertical-align: middle; }
+        .tag-sales { background-color: #fff3e0; color: #e65100; }
+        .tag-ai { background-color: #f3e5f5; color: #4a148c; }
+        .tag-gen { background-color: #f5f5f5; color: #616161; }
+    </style>
     
+    </head>
+    <body>
+        <div class='header'>
+            <h1>🤖 AI業界ニュース・ダッシュボード</h1>
+            <p>最終更新: 2026年02月20日</p>
+        </div>
+        <div class='container'>
+    
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE1YOHFITzl0STBScWVMWHY4MWZENS1ONHF0WlVkRWh6eEpBLWZqMm5qZC1VODNOc0ZOVWV3X2YwR1dKczk5QU01Mzc1QkR3UXdTY0g2Z1JpTGR3LWRQUS1jbmdCZE1ZVXIzRXc?oc=5' target='_blank'>Hacobu、生成AIが帳票を物流データ化するAI-OCR「MOVO Adapter」提供開始。物流領域のFAX・紙業務を起点からデジタル化 - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「Hacobu、生成AIが帳票を物流データ...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Fri, 20 Feb 2026 03:30:01 GMT</div>
+            <div class='date'>🕒 今日 03:30</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 ITmedia</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMickFVX3lxTE5iOWprQko2RFNmeGpiOXJ3M2duc0pVM2JzeGVpRnVvZHVDWUhkSWRQZWtpbzBCZlJxeW9CV3BoNHdvNGxHeWRuQXVBOHdyaGQ2QzJUUGNCWHJFeUdlVnZWYnAzWWo4cGxfcG9aSmdZSFZpZw?oc=5' target='_blank'>テストもデバッグもレビューも「AIエージェントとの協働」が標準に Anthropicが示す2026年の開発トレンド - ITmedia<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
+    <div class='ai-summary'>
+        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
+        <ul>
+            <li>この記事「テストもデバッグもレビューも「AIエージ...」の重要ポイントをAIが解析中。</li>
+            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
+        </ul>
     </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 NTT Data</span>
-    <a href='https://news.google.com/rss/articles/CBMibEFVX3lxTE5xdHVJb09EdWx6MzNGQ21nN3l5VWQtQXVscXNxNzQxNnFSQVEtYzFIVTNWOEY3ZFhObnQ0R1V0aUJCVGoyM0lYc0RHZG8wZkZMRlZ2TTF3ZEk2MkFRa2MzanpreU9vU3lpUUFVbQ?oc=5' target='_blank'>AIエージェントが加速させるCX革命 - NTT Data<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
     
+            <div class='date'>🕒 今日 04:00</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 NTT Data</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMibEFVX3lxTE5xdHVJb09EdWx6MzNGQ21nN3l5VWQtQXVscXNxNzQxNnFSQVEtYzFIVTNWOEY3ZFhObnQ0R1V0aUJCVGoyM0lYc0RHZG8wZkZMRlZ2TTF3ZEk2MkFRa2MzanpreU9vU3lpUUFVbQ?oc=5' target='_blank'>AIエージェントが加速させるCX革命 - NTT Data<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「AIエージェントが加速させるCX革命 -...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Tue, 17 Feb 2026 16:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 日経クロステック</span>
-    <a href='https://news.google.com/rss/articles/CBMibEFVX3lxTFByVUs3RWVzenJKeWpPVE41SnZkcHBzc0UzN1c0M3V0N2R4ZEY1S3l4WXlwZ01yTFI5LXJpV1NEUjN0XzFGY0JDc0xUdlotTi0yUjJmU2FQdUFabzhkcXlyRm9EM1JsVzdETU9HYQ?oc=5' target='_blank'>「SaaS is Dead」かどうか知らんが、AIエージェントはRPAの悪夢再来だぞ - 日経クロステック<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★★</span></a>
-    
+            <div class='date'>🕒 2/17</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 日経クロステック</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMibEFVX3lxTFByVUs3RWVzenJKeWpPVE41SnZkcHBzc0UzN1c0M3V0N2R4ZEY1S3l4WXlwZ01yTFI5LXJpV1NEUjN0XzFGY0JDc0xUdlotTi0yUjJmU2FQdUFabzhkcXlyRm9EM1JsVzdETU9HYQ?oc=5' target='_blank'>「SaaS is Dead」かどうか知らんが、AIエージェントはRPAの悪夢再来だぞ - 日経クロステック<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「「SaaS is Dead」かどうか知ら...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Sun, 15 Feb 2026 20:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 トラベルボイス</span>
-    <a href='https://news.google.com/rss/articles/CBMiVEFVX3lxTE01d0dMRkRmY3M0ZThWY0oxUWxTOFlsbVZ5QmtVNlJRLTNWeFdBOGVtbFhuYzAwVXhTdG9XZXQ2VERqZWdzWmhFVGFOeTk5NUI2RjNQZw?oc=5' target='_blank'>旅行計画や予約で生成AI活用はすでに"前提条件"に、海外事例から考察した、世界大手ホテルや旅行会社のAI取組トレンド【コラム】 - トラベルボイス<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/15</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 トラベルボイス</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiVEFVX3lxTE01d0dMRkRmY3M0ZThWY0oxUWxTOFlsbVZ5QmtVNlJRLTNWeFdBOGVtbFhuYzAwVXhTdG9XZXQ2VERqZWdzWmhFVGFOeTk5NUI2RjNQZw?oc=5' target='_blank'>旅行計画や予約で生成AI活用はすでに"前提条件"に、海外事例から考察した、世界大手ホテルや旅行会社のAI取組トレンド【コラム】 - トラベルボイス<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「旅行計画や予約で生成AI活用はすでに"前...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Mon, 16 Feb 2026 09:09:27 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 ビジネス+IT</span>
-    <a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTE9sVlVoaEJZWjZJX2F4d2F4QmtVTXZUaHZvcnljTElhbXJyU3cwNHBGTUlKYVdkNFprdlhCXzlVdnN6a1AyWUtJc2VNZk41ODJLcHVn?oc=5' target='_blank'>55兆円市場「生成AIアプリ」トップ20、Gemini猛追…王者ChatGPTが狙う「第3のOS」戦略 - ビジネス+IT<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/16</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 ビジネス+IT</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTE9sVlVoaEJZWjZJX2F4d2F4QmtVTXZUaHZvcnljTElhbXJyU3cwNHBGTUlKYVdkNFprdlhCXzlVdnN6a1AyWUtJc2VNZk41ODJLcHVn?oc=5' target='_blank'>55兆円市場「生成AIアプリ」トップ20、Gemini猛追…王者ChatGPTが狙う「第3のOS」戦略 - ビジネス+IT<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「55兆円市場「生成AIアプリ」トップ20...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Mon, 16 Feb 2026 22:10:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 iotnews.jp</span>
-    <a href='https://news.google.com/rss/articles/CBMiQ0FVX3lxTE51TzNwQ0pBM1UtMWFORXVZMHlvRjFLZ0VLMEhFaEJQbkd4b2lTQmxXSTI5VW9HMXQwZ3g5SC1sWkFSYWvSAUhBVV95cUxQNnV2V19DUnFpNXFHekIyZ2VPWHI0b1JJVGJnUGZxaFZ1MV8wNlV4RHp5ZmdwZHV0YjlKaEpwOHNDVmxnS1lCc3U?oc=5' target='_blank'>NTT-AT、RPAツール管理製品「WMC」にAIエージェントとRPAを連携させるMCPサーバ機能を追加 - iotnews.jp<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/16</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 iotnews.jp</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiQ0FVX3lxTE51TzNwQ0pBM1UtMWFORXVZMHlvRjFLZ0VLMEhFaEJQbkd4b2lTQmxXSTI5VW9HMXQwZ3g5SC1sWkFSYWvSAUhBVV95cUxQNnV2V19DUnFpNXFHekIyZ2VPWHI0b1JJVGJnUGZxaFZ1MV8wNlV4RHp5ZmdwZHV0YjlKaEpwOHNDVmxnS1lCc3U?oc=5' target='_blank'>NTT-AT、RPAツール管理製品「WMC」にAIエージェントとRPAを連携させるMCPサーバ機能を追加 - iotnews.jp<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「NTT-AT、RPAツール管理製品「WM...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Mon, 16 Feb 2026 05:56:13 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 nomura.co.jp</span>
-    <a href='https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIdmMtQkxSSFY2djN1b0JVV3NSRmZnbUt4eUFWOFR6ZWo4aGtNMlQwVDJlRmhQRlFnX0ZSLTg4cDFJRm1Qd2FpVVNiYjFpRWNORk1KY3BmOG9uNWpDdEtV?oc=5' target='_blank'>生成AIからエージェントAIへ AI活用のトレンド変化を解説 野村證券・竹綱宏行 - nomura.co.jp<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/16</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 nomura.co.jp</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIdmMtQkxSSFY2djN1b0JVV3NSRmZnbUt4eUFWOFR6ZWo4aGtNMlQwVDJlRmhQRlFnX0ZSLTg4cDFJRm1Qd2FpVVNiYjFpRWNORk1KY3BmOG9uNWpDdEtV?oc=5' target='_blank'>生成AIからエージェントAIへ AI活用のトレンド変化を解説 野村證券・竹綱宏行 - nomura.co.jp<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「生成AIからエージェントAIへ AI活用...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Fri, 06 Feb 2026 08:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 アットプレス</span>
-    <a href='https://news.google.com/rss/articles/CBMiTkFVX3lxTFBpUzkzekdyTV9SQy1tclRycURRemtCWHRqVWk5RDMwcU1lY1FRMXpkNnRzOWI5N2l3TW4yV1NJT1pSQl9jWF9DT2RKR3RGZw?oc=5' target='_blank'>Excel業務を変える生成AI-OCR データベース一体型「SMART DATA COLLECTOR」 正式リリース - アットプレス<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/6</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 アットプレス</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiTkFVX3lxTFBpUzkzekdyTV9SQy1tclRycURRemtCWHRqVWk5RDMwcU1lY1FRMXpkNnRzOWI5N2l3TW4yV1NJT1pSQl9jWF9DT2RKR3RGZw?oc=5' target='_blank'>Excel業務を変える生成AI-OCR データベース一体型「SMART DATA COLLECTOR」 正式リリース - アットプレス<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「Excel業務を変える生成AI-OCR ...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Thu, 12 Feb 2026 02:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 Forbes JAPAN</span>
-    <a href='https://news.google.com/rss/articles/CBMiWEFVX3lxTE1TeF9oUlRvT1k4UkxjQWREUUFCbldhY25CZVNHVGxSNzk3cEpVYm5NVExodDZTODFDMjU4WTZnVVZ2d2RVZjRSMlVRSUF6V1RNV1NOWk9Edmk?oc=5' target='_blank'>2026年に向けて備えるべき、「AIエージェント」8つのトレンド - Forbes JAPAN<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/12</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 Forbes JAPAN</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiWEFVX3lxTE1TeF9oUlRvT1k4UkxjQWREUUFCbldhY25CZVNHVGxSNzk3cEpVYm5NVExodDZTODFDMjU4WTZnVVZ2d2RVZjRSMlVRSUF6V1RNV1NOWk9Edmk?oc=5' target='_blank'>2026年に向けて備えるべき、「AIエージェント」8つのトレンド - Forbes JAPAN<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「2026年に向けて備えるべき、「AIエー...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Fri, 17 Oct 2025 07:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 ZDNET Japan</span>
-    <a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTFAwNnNfbEREcG04em4wSlhKOTNfZU50WXpVcWk3VE13TnJUQkgwVk1FZDRudGhsdk1xZ3hUc2V0Q1BfMWtLSjQtc254RkE3RktFckh3?oc=5' target='_blank'>RPAとAIエージェントの組み合わせは存在感を示せるか--UiPathの取り組みから探る - ZDNET Japan<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 10/17</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 ZDNET Japan</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiU0FVX3lxTFAwNnNfbEREcG04em4wSlhKOTNfZU50WXpVcWk3VE13TnJUQkgwVk1FZDRudGhsdk1xZ3hUc2V0Q1BfMWtLSjQtc254RkE3RktFckh3?oc=5' target='_blank'>RPAとAIエージェントの組み合わせは存在感を示せるか--UiPathの取り組みから探る - ZDNET Japan<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「RPAとAIエージェントの組み合わせは存...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Thu, 23 Oct 2025 07:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 ライブドアニュース</span>
-    <a href='https://news.google.com/rss/articles/CBMiX0FVX3lxTE5PN1UydmFpQV9lNEZSZ25BMEZsTXR3WlJZcmJweTZzTTdXaFJvUjYxNDN2NTNhVUhYSTlRWTRtaDZJS3FVRFluYWwxNjdGZTdLNDFpakVKZjktN3VIZHI0?oc=5' target='_blank'>【今週のAIトレンド丸わかり】既存の動画生成AIモデルを大きく超える性能の「Seedance 2.0」/ChatGPTの「Deep research」が強化(GPT-5.2実装) - ライブドアニュース<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
-    <div class='ai-summary'>
-        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
-        <ul>
-            <li>この記事「【今週のAIトレンド丸わかり】既存の動画...」の重要ポイントをAIが解析中。</li>
-            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
-        </ul>
-    </div>
-    
-    <div class='date'>🕒 Sun, 15 Feb 2026 09:07:43 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 EnterpriseZine</span>
-    <a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nN1RhclFjRHZIUTE4TlVXaU4wd2lrSGQ0cm9janpJZjRkRnQtbTVNZmN5d0I3Q2ItSFFXcVNOaUxORjUzLXB6UHlGT0lrY1dtOWJ3WW15NHIxdw?oc=5' target='_blank'>2026年はAIエージェント「実行」の年へ UiPathが説く、7つのトレンドと日本企業の勝ち筋 (1/2) - EnterpriseZine<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 10/23</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #6b7280;'>📰 EnterpriseZine</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nN1RhclFjRHZIUTE4TlVXaU4wd2lrSGQ0cm9janpJZjRkRnQtbTVNZmN5d0I3Q2ItSFFXcVNOaUxORjUzLXB6UHlGT0lrY1dtOWJ3WW15NHIxdw?oc=5' target='_blank'>2026年はAIエージェント「実行」の年へ UiPathが説く、7つのトレンドと日本企業の勝ち筋 (1/2) - EnterpriseZine<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「2026年はAIエージェント「実行」の年...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Tue, 03 Feb 2026 08:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 ロボスタ</span>
-    <a href='https://news.google.com/rss/articles/CBMiZEFVX3lxTE93M1FmMUhBZ3hua1hXSlNjdmRoMnhhRFlQQ0RTMVZjME9VdEVodE1tVGdLSExkNkhBbFlULUhfS25KWThieWJxVGl0LVp0ZHczZW9VTnkzWEp3ak9ZWDZyMU1rRDc?oc=5' target='_blank'>「AIエージェントが同僚に」2026年AI業界の重要トレンド3選、Laboro.AI勉強会レポート - ロボスタ<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
-    <div class='ai-summary'>
-        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
-        <ul>
-            <li>この記事「「AIエージェントが同僚に」2026年A...」の重要ポイントをAIが解析中。</li>
-            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
-        </ul>
-    </div>
-    
-    <div class='date'>🕒 Mon, 02 Feb 2026 08:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #6b7280;'>📰 scsk.jp</span>
-    <a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE1oYlcwSXpOVmRHRDNmanpNNkROS0FIU054SEV3MlVid3dpWFhXUlVFNl80aGtHRVlIZkFZcjVXTWI3ZlBxTUFGU2lvLUx5UHdnWjY4NHgxNUMwZw?oc=5' target='_blank'>AIエージェント×RPA×人の協働による業務最適化 ─ UiPath最新エージェンティックオートメーション活用セミナー - scsk.jp<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
-    <div class='ai-summary'>
-        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
-        <ul>
-            <li>この記事「AIエージェント×RPA×人の協働による...」の重要ポイントをAIが解析中。</li>
-            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
-        </ul>
-    </div>
-    
-    <div class='date'>🕒 Tue, 27 Jan 2026 08:00:00 GMT</div>
-    </div>
-<div class='card'>
-    <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
-    <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTFB5aVh2NDkzUlZwZjRBT2w1VTNsM3BVN2cyTEw4REhlNzh6R2pBYllpUFdNS04yWjl3MnNGcldRVDRBZFdydW1uSXRxTl9oLVZnVGk5UW5XbV9iTTg5RkYycVdCOW1ldHE5TkE?oc=5' target='_blank'>薬局のサプリメント導入ニーズ予測AIエージェント「Metareal ニュートリエント・トレンド(Metareal NT)」プレミアムプラン2/16提供開始 - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
-    
+            <div class='date'>🕒 2/3</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTFB5aVh2NDkzUlZwZjRBT2w1VTNsM3BVN2cyTEw4REhlNzh6R2pBYllpUFdNS04yWjl3MnNGcldRVDRBZFdydW1uSXRxTl9oLVZnVGk5UW5XbV9iTTg5RkYycVdCOW1ldHE5TkE?oc=5' target='_blank'>薬局のサプリメント導入ニーズ予測AIエージェント「Metareal ニュートリエント・トレンド(Metareal NT)」プレミアムプラン2/16提供開始 - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
     <div class='ai-summary'>
         <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
         <ul>
             <li>この記事「薬局のサプリメント導入ニーズ予測AIエー...」の重要ポイントをAIが解析中。</li>
             <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
-            <li>社内展開時のイメージとして先行実装しています。</li>
         </ul>
     </div>
     
-    <div class='date'>🕒 Mon, 16 Feb 2026 06:30:01 GMT</div>
+            <div class='date'>🕒 2/16</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE5JdnE2TlNoUVZsbzhKVGJiTlJoWV92a0h5QXIwRFU5OFhlTEhVN3V6N2otV3pZdnFfcG5fMDBYOW0tWXJ5OWVsdjY3R0lzTXlxQlBLVkVzMWZQX211dzI1b3dzZWIzemd6aGc?oc=5' target='_blank'>2026年 「生成AI」事業戦略総調査＜グローバル（海外企業）編＞（50社） - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
+    <div class='ai-summary'>
+        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
+        <ul>
+            <li>この記事「2026年 「生成AI」事業戦略総調査＜...」の重要ポイントをAIが解析中。</li>
+            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
+        </ul>
     </div>
-     </body>
-</html>
+    
+            <div class='date'>🕒 2/14</div>
+        </div>
+        
+        <div class='card'>
+            <div style='margin-bottom: 8px;'>
+                <span class='category-tag tag-ai'>🤖 AI/Tech</span>
+                <span class='source-badge' style='background-color: #0b419b;'>📢 PR TIMES</span>
+            </div>
+            <a href='https://news.google.com/rss/articles/CBMiakFVX3lxTE0wT3dzNXo5ZTZ4WFhzNkZFZE5VSUpOTFpRLXZzQnJkVmpMYmxUVGZ0SjRkVVVGMGxveEhxa1R0aVZnTjR2QzE0cUYxN1VWdzE3Mk42d3UtcHZnLTZJd1BsTGdMdG5ZeG94a3c?oc=5' target='_blank'>農業法人の肥料需要予測AIエージェント「Metareal ファーティライザートレンド(Metareal FE)」プレミアムプラン2/12提供開始 - PR TIMES<span style='color: #f39c12; margin-left: 8px; font-size: 22px;'>★★</span></a>
+            
+    <div class='ai-summary'>
+        <div class='ai-summary-title'>✨ Gemini AI 要約 (Demo)</div>
+        <ul>
+            <li>この記事「農業法人の肥料需要予測AIエージェント「...」の重要ポイントをAIが解析中。</li>
+            <li>APIキー設定完了後、ここに3行要約が自動生成されます。</li>
+        </ul>
+    </div>
+    
+            <div class='date'>🕒 2/12</div>
+        </div>
+        </div></body></html>
